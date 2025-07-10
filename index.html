@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="todo.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="projects">
+            <h5>Projects</h5>
+            <div class="card projectsBoard"></div>
+        </div>
+        <div class="todos">
+            <h5>Todos</h5>
+            <div class="card board"></div>
+        </div>
+        <div class="new">
+            <h5>New todo</h5>
+            <div class="card" id="new-todo">
+                <div class="inp">
+                    <label for="todo">Todo name</label>
+                    <input type="text" id="todo">
+                </div>
+                <div class="inp">
+                    <label for="pro">Project</label>
+                    <input type="text" id="pro">
+                </div>
+                <div class="inp">
+                    <label for="dis">Discription</label>
+                    <textarea id="dis" id="dis"></textarea>
+
+                </div>
+                <div class="inp">
+                    <label for="date">Finishing time</label>
+                    <input type="date" id="date">
+                </div>
+                <button class="add">Add</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

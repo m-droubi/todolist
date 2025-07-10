@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'fira_sansbook_italic';
+    src: url(fonts/firasans-bookitalic-webfont.woff2) format('woff2'),
+         url(fonts/firasans-bookitalic-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(189, 238, 238);
+   
+}
+* {
+    font-family: 'fira_sansbook_italic', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100%; 
+    display: grid;
+    grid-template-columns: 250px 1fr 500px 1fr;
+    grid-template-rows: 200px 1fr;
+    padding: 20px;
+}
+
+#container>div {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h5 {
+    flex-basis: 20px;
+    padding: 5px;
+    
+}
+
+.card {
+    border: 2px solid rgb(0, 255, 255);
+    flex-basis: 100%;
+    border-radius: 10px;
+    background-color: rgb(225, 250, 250);
+    overflow: auto;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    
+}
+
+.todos {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.new {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3; 
+}
+
+.new div {
+    background-color: rgb(6, 161, 161);
+    overflow: hidden;
+}
+
+#new-todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inp {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    border: 1px solid rgb(0, 255, 255);
+    border-radius: 5px;
+    padding-left: 3px;
+}
+
+.importance {
+    display: flex;
+    gap: 5px;
+}
+ 
+fieldset {
+    width: 80%;
+    padding: 4%;
+    border-radius: 5px;
+}
+fieldset>div {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(171, 255, 255);
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+}
+button:hover {
+    background-color: rgb(131, 231, 231);
+}
+
+.todo {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(0, 255, 255);
+    overflow: auto;
+    height: 100px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.todo:hover{
+    background-color: rgb(51, 199, 199);
+}
+
+.project {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    background-color: rgb(0, 255, 255);
+    overflow: auto;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.d {
+    text-align: end;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+h3 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.p{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.q {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.todo button {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    
+}
