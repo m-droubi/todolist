@@ -7,6 +7,7 @@ const d = document.querySelector("#dis");
 const t = document.querySelector("#date");
 
 
+
 let storage = JSON.parse(localStorage.getItem('storage')) || {
     id: 0,
     todos: [],
@@ -14,9 +15,6 @@ let storage = JSON.parse(localStorage.getItem('storage')) || {
     projectNumber: [],
 };
 
-function store() {
-    localStorage.setItem('storage', JSON.stringify(storage));
-} 
 
 
 
@@ -87,7 +85,6 @@ function displayTodosCards() {
             }
         }
         });
-        store();
     }
 }
 
@@ -130,7 +127,15 @@ function clean() {
     p.value = ``;
     d.value = ``;
     t.value = ``;
-}
+};
 
-displayTodosCards();
-displayProjectsCards();
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('storage', JSON.stringify(storage));
+    });
+
+
+
+window.addEventListener('load', () => {  
+    displayTodosCards();
+    displayProjectsCards();
+    });
